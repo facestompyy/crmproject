@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Bienvenue, {{ current_user.username }}!</h1>
+    <p class="lead">Système de gestion des clients pour les entreprises de construction.</p>
+    <hr class="my-4">
+    <p>Commencez par gérer vos clients ou consulter les chantiers en cours.</p>
+</div>
+{% endblock %}
