@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Edit Client{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Edit Client</h1>
+    
+    <form method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{ client.name }}" required>
+        </div>
+        <!-- Other fields similar to create.html but with values -->
+        <button type="submit" class="btn btn-primary">Update Client</button>
+        <a href="{{ url_for('clients.view', id=client.id) }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
