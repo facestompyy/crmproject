@@ -1,0 +1,16 @@
+setup.py
+./app/__init__.py
+./app/extensions.py
+./app/models.py
+./app/Routes/Clients.py
+./app/Routes/Projets.py
+./app/Routes/Utilisateurs.py
+./app/Routes/__init__.py
+./app/Routes/auth.py
+./app/Routes/main.py
+./app/main/__init__.py
+crmproject.egg-info/PKG-INFO
+crmproject.egg-info/SOURCES.txt
+crmproject.egg-info/dependency_links.txt
+crmproject.egg-info/requires.txt
+crmproject.egg-info/top_level.txt

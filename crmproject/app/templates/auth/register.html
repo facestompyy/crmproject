@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Ajouter un Utilisateur{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Ajouter un Nouvel Utilisateur</h2>
+    <div class="card">
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('utilisateurs.ajouter_utilisateur') }}">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    <label for="nom_utilisateur">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="nom_utilisateur" name="nom_utilisateur" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mot_de_passe">Mot de passe</label>
+                    <input type="password" class="form-control" id="mot_de_passe" name="mot_de_passe" required>
+                </div>
+                
+                <div class="alert alert-warning mt-3">
+                    <strong>Note:</strong> Le rôle par défaut est "employé". L'administrateur doit définir les permissions appropriées après la création.
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Créer l'utilisateur</button>
+                <a href="{{ url_for('utilisateurs.utilisateurs') }}" class="btn btn-secondary">Annuler</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
